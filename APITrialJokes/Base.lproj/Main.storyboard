@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="APITrialJokes" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GkU-SS-GlH">
+                                <rect key="frame" x="6" y="303" width="402" height="65"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="402" id="F1C-B4-xxT"/>
+                                    <constraint firstAttribute="height" constant="65" id="o2s-Ha-hYi"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="23"/>
+                                <color key="textColor" red="0.95464421050000003" green="0.96575803810000005" blue="0.99611133340000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="JPy-3F-rCo">
+                                <rect key="frame" x="6" y="61" width="402" height="142"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="142" id="aZe-wK-ipB"/>
+                                </constraints>
+                                <color key="textColor" red="0.95306617019999995" green="0.96416562800000005" blue="0.99611133340000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0wN-0D-Wcs">
+                                <rect key="frame" x="102" y="773" width="210" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.95306617019999995" green="0.96416562800000005" blue="0.99611133340000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Tell me a joke"/>
+                                <connections>
+                                    <action selector="tellJokeBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="w5e-kb-qQZ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="0.6588235294" green="0.12549019610000001" blue="0.6588235294" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="JPy-3F-rCo" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="3eS-KH-Tkc"/>
+                            <constraint firstItem="JPy-3F-rCo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="6" id="D3m-59-d6F"/>
+                            <constraint firstItem="JPy-3F-rCo" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="17" id="EZj-jC-xOa"/>
+                            <constraint firstItem="JPy-3F-rCo" firstAttribute="trailing" secondItem="GkU-SS-GlH" secondAttribute="trailing" id="N8Q-gw-uxf"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="JPy-3F-rCo" secondAttribute="trailing" constant="6" id="WZy-nY-25I"/>
+                            <constraint firstItem="JPy-3F-rCo" firstAttribute="leading" secondItem="GkU-SS-GlH" secondAttribute="leading" id="tPt-4Q-r9x"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="GkU-SS-GlH" secondAttribute="bottom" constant="494" id="ztM-MI-HsP"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="jokeBtnOutlet" destination="0wN-0D-Wcs" id="8HM-59-s77"/>
+                        <outlet property="jokeTextView" destination="JPy-3F-rCo" id="b95-MN-6us"/>
+                        <outlet property="punchLineLbl" destination="GkU-SS-GlH" id="Rv5-j8-d3w"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="126.5625"/>
+        </scene>
+    </scenes>
+</document>
